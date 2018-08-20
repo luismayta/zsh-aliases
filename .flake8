@@ -1,0 +1,3 @@
+[flake8]
+exclude = build,.git,.tox,./django/utils/six.py,./django/conf/app_template/*,./tests/.env
+max-line-length = 120
