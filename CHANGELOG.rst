@@ -8,8 +8,16 @@ This file uses change log convention from `keep a CHANGELOG`_.
 `Unreleased`_
 +++++++++++++
 
+`0.1.1`_ - 2019-01-21
+++++++++++++++++++++++
 
-.. _`Unreleased`: https://github.com/luismayta/zsh-aliases/compare/0.0.0...HEAD
+`0.1.0`_ - 2019-01-20
+++++++++++++++++++++++
+
+
+.. _`Unreleased`: https://github.com/luismayta/zsh-aliases/compare/0.1.1...HEAD
+.. _`0.1.1`: https://github.com/luismayta/zsh-aliases/compare/0.1.0...0.1.1
+.. _`0.1.0`: https://github.com/luismayta/zsh-aliases/compare/0.0.0...0.1.0
 .. _0.0.0: https://github.com/luismayta/zsh-aliases/compare/0.0.0...0.0.1
 
 .. _`keep a CHANGELOG`: http://keepachangelog.com/en/0.3.0/
