@@ -26,5 +26,13 @@ if (( $+commands[docker] )); then
         docker run -it --rm supertest2014/nyan;
     }
 
+    function ytd-mp3() {
+        docker run --rm -v $PWD:/data vimagick/youtube-dl --extract-audio --audio-format mp3 -l
+    }
+
+    function ytdl(){
+        docker run --rm -v $PWD:/data vimagick/youtube-dl
+    }
+
 
 fi
