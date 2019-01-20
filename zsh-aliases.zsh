@@ -20,3 +20,11 @@ if (( $+commands[tmuxinator] )); then
         tmuxinator ${1};
     }
 fi
+if (( $+commands[docker] )); then
+    # show nyancat in terminal
+    function nyancat() {
+        docker run -it --rm supertest2014/nyan;
+    }
+
+
+fi
