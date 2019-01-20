@@ -1,20 +1,22 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env ksh
 # -*- coding: utf-8 -*-
 
 #
 # Defines alias for osx or linux.
+#
+# Requirements:
+#  - docker: https://www.docker.com
+#  - zsh: https://www.zsh.org/
 #
 # Authors:
 #   Luis Mayta <slovacus@gmail.com>
 #
 
 # Functions:
-# show nyancat in terminal
-function nyancat() {
-    docker run -it --rm supertest2014/nyan;
-}
 
-# Alias for tmuxinator
-function mux() {
-    tmuxinator ${1};
-}
+if (( $+commands[tmuxinator] )); then
+    # Alias for tmuxinator
+    function mux() {
+        tmuxinator ${1};
+    }
+fi
