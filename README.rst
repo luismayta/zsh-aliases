@@ -3,7 +3,7 @@ zsh-aliases
 
 |Build Status| |GitHub issues| |GitHub license|
 
-:Version: 0.0.0
+:Version: 0.1.0
 :Web: https://github.com/luismayta/zsh-aliases
 :Download: http://github.com/luismayta/zsh-aliases
 :Source: http://github.com/luismayta/zsh-aliases
