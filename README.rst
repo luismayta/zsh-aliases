@@ -118,6 +118,7 @@ Feel free to contact me to discuss any issues, questions, or comments.
 * `GitHub`_
 * `LinkedIn`_
 * `Website`_
+* `PGP`_
 
 |linkedin| |beacon| |made|
 
@@ -137,6 +138,7 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
     :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
 .. _`Website`: http://luismayta.github.io
+.. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
 .. |Build Status| image:: https://travis-ci.org/luismayta/zsh-aliases.svg
    :target: https://travis-ci.org/luismayta/zsh-aliases
