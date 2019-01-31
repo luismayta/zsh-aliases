@@ -16,7 +16,7 @@ test.help:
 test: clean
 	@echo $(MESSAGE) Running tests on the current Python interpreter with coverage $(END)
 	@if [[ -z "${run}" ]]; then \
-		$(DOCKER_TEST) run --rm app bash -c "python setup.py test";\
+		$(DOCKER_TEST) run --rm app bash -c "pytest";\
 	fi
 
 test.lint: clean
