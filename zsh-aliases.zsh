@@ -21,6 +21,10 @@ if (( $+commands[tmuxinator] )); then
     }
 fi
 
+function pubkey(){
+    more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'
+}
+
 # open, pbcopy and pbpaste on linux
 if [ "$(uname -s)" != "Darwin" ]; then
 	  if [ -z "$(command -v pbcopy)" ]; then
