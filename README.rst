@@ -82,6 +82,25 @@ install this plugin by doing the following:
    running zsh session.
 3. Enjoy!
 
+Contributing
+------------
+
+Contributions are welcome! After cloning the repository:
+
+.. code-block:: console
+
+    $ make environment
+    $ make setup
+
+Tests are run with ``make``, you can run the baseline environments before submitting a PR:
+
+.. code-block:: console
+
+    $ make test
+
+Style checks and formatting are done automatically during commit courtesy of
+`pre-commit <https://pre-commit.com>`_.
+
 
 Support
 -------
@@ -112,25 +131,6 @@ Changelog
 
 Please see `CHANGELOG`_ for more information what
 has changed recently.
-
-Contributing
-------------
-
-Contributions are welcome! After cloning the repository:
-
-.. code-block:: console
-
-    $ make environment
-    $ make setup
-
-Tests are run with ``make``, you can run the baseline environments before submitting a PR:
-
-.. code-block:: console
-
-    $ make test
-
-Style checks and formatting are done automatically during commit courtesy of
-`pre-commit <https://pre-commit.com>`_.
 
 Contact Info
 ------------
