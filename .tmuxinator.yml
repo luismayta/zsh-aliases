@@ -43,20 +43,6 @@ windows:
         - editor:
         - pwd:
         - pwd:
-  - python:
-      layout: main-vertical
-      panes:
-        - ipython:
-  - databases:
-      layout: main-vertical
-      panes:
-        - postgresql:
-        - ls:
-  - aws:
-      layout: main-vertical
-      panes:
-        - webserver:
-        - databases:
   - docker:
       layout: main-vertical
       panes:
