@@ -65,9 +65,7 @@ if (( $+commands[docker] )); then
     }
 
     function ytd-mp3() {
-        docker run --rm -v \
-               "${PWD}":/data vimagick/youtube-dl \
-               --extract-audio --audio-format mp3 -l "$@"
+        docker run --rm -v "${PWD}":/data vimagick/youtube-dl --extract-audio --audio-format mp3 "$@"
     }
 
     function ytdl(){
@@ -81,7 +79,7 @@ if (( $+commands[docker] )); then
     function komiser(){
         docker run --rm -d -p 3000:3000 \
                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
-               -e AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY}" \
+               -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
                -e AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" --name komiser mlabouardy/komiser
     }
 fi

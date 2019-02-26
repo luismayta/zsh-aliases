@@ -37,11 +37,12 @@ pre_window: pyenv activate zsh-aliases
 startup_window: docker
 
 windows:
-  - aws:
-      layout: main-vertical
+  - editor:
+      layout: even-horizontal
       panes:
-        - webserver:
-        - databases:
+        - editor:
+        - pwd:
+        - pwd:
   - docker:
       layout: main-vertical
       panes:
