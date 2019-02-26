@@ -46,6 +46,19 @@ if [ "$(uname -s)" != "Darwin" ]; then
 fi
 
 if (( $+commands[docker] )); then
+
+    function awscli () {
+        docker run --rm -it \
+               -v "${HOME}/.aws:/root/.aws" \
+               nikovirtala/awscli:latest "$@"
+    }
+
+    function aws-shell () {
+        docker run --rm -it \
+               -v "${HOME}/.aws:/root/.aws" \
+               nikovirtala/aws-shell:latest "$@"
+    }
+
     # show nyancat in terminal
     function nyancat() {
         docker run -it --rm supertest2014/nyan;
@@ -60,7 +73,7 @@ if (( $+commands[docker] )); then
     }
 
     function pandoc(){
-        docker run --rm -v "${PWD}":/data jpbernius/pandoc "$@"
+        docker run --rm -v "${PWD}":/source jagregory/pandoc "$@"
     }
 
     function komiser(){
