@@ -15,7 +15,7 @@ PYENV_NAME="${PROJECT}"
 SHELL := /bin/bash
 ROOT_DIR=$(shell pwd)
 MESSAGE:=🍺️
-MESSAGE_HAPPY:="${MESSAGE} Happy Coding"
+MESSAGE_HAPPY:="Done! ${MESSAGE} | Now Happy Coding"
 SOURCE_DIR=$(ROOT_DIR)/
 REQUIREMENTS_DIR=$(ROOT_DIR)/requirements
 PROVISION_DIR:=$(ROOT_DIR)/provision
@@ -54,6 +54,7 @@ endif
 	@echo
 
 setup: clean
+	@echo "=====> setup dependences..."
 	$(pip_install) "${REQUIREMENTS_DIR}/setup.txt"
 	@if [ -e "${REQUIREMENTS_DIR}/private.txt" ]; then \
 			$(pip_install) "${REQUIREMENTS_DIR}/private.txt"; \
@@ -63,6 +64,7 @@ setup: clean
 	@if [ ! -e ".env" ]; then \
 		cp -rf .env-sample .env;\
 	fi
+	@echo $(MESSAGE_HAPPY)
 
 environment: clean
 	@echo "=====> loading virtualenv ${PYENV_NAME}..."
