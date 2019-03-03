@@ -16,16 +16,16 @@
 
 if (( $+commands[tmuxinator] )); then
     # Alias for tmuxinator
-    function mux() {
+    mux() {
         tmuxinator ${1};
     }
 fi
 
-function pubkey(){
-    more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'
+pubkey(){
+    more ~/.ssh/id_rsa.pub | pbcopy && echo '====> Public key copied to pasteboard.'
 }
 
-function gi() {
+gi() {
 	  curl -s "https://www.gitignore.io/api/$*"
 }
 
@@ -47,18 +47,20 @@ fi
 
 if (( $+commands[docker] )); then
 
-    function awscli () {
+    awscli () {
         docker run --rm -it \
-               -v "${HOME}/.aws:/root/.aws" \
+               -v "$(pwd):/home/nikovirtala" \
+               -v "${HOME}/.aws:/home/nikovirtala/.aws" \
                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
                -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
                -e AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" \
                nikovirtala/awscli:latest "$@"
     }
 
-    function aws-shell () {
+    aws-shell () {
         docker run --rm -it \
-               -v "${HOME}/.aws:/root/.aws" \
+               -v "$(pwd):/home/nikovirtala" \
+               -v "${HOME}/.aws:/home/nikovirtala/.aws" \
                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
                -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
                -e AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" \
@@ -66,23 +68,23 @@ if (( $+commands[docker] )); then
     }
 
     # show nyancat in terminal
-    function nyancat() {
+    nyancat() {
         docker run -it --rm supertest2014/nyan;
     }
 
-    function ytd-mp3() {
+    ytd-mp3() {
         docker run --rm -v "${PWD}":/data vimagick/youtube-dl --extract-audio --audio-format mp3 "$@"
     }
 
-    function ytdl(){
+    ytdl(){
         docker run --rm -v "${PWD}":/data vimagick/youtube-dl "$@"
     }
 
-    function pandoc(){
+    pandoc(){
         docker run --rm -v "${PWD}":/source jagregory/pandoc "$@"
     }
 
-    function komiser(){
+    komiser(){
         docker run --rm -d -p 3000:3000 \
                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
                -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
