@@ -1,9 +1,24 @@
+===========
 zsh-aliases
 ===========
 
-|Build Status| |GitHub issues| |GitHub license|
+Functions and tools for zsh
 
-:Version: 0.1.2
+.. code-block:: bash
+
+    antibody bundle luismayta/zsh-aliases
+
+
+|ci| |GitHub issues| |GitHub license|
+
+.. |ci| image:: https://travis-ci.org/luismayta/zsh-aliases.svg
+   :target: https://travis-ci.org/luismayta/zsh-aliases
+.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-aliases.svg
+   :target: https://github.com/luismayta/zsh-aliases/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
+
+:Version: 0.2.0
 :Web: https://github.com/luismayta/zsh-aliases
 :Download: http://github.com/luismayta/zsh-aliases
 :Source: http://github.com/luismayta/zsh-aliases
@@ -67,6 +82,25 @@ install this plugin by doing the following:
    running zsh session.
 3. Enjoy!
 
+Contributing
+------------
+
+Contributions are welcome! After cloning the repository:
+
+.. code-block:: console
+
+    $ make environment
+    $ make setup
+
+Tests are run with ``make``, you can run the baseline environments before submitting a PR:
+
+.. code-block:: console
+
+    $ make test
+
+Style checks and formatting are done automatically during commit courtesy of
+`pre-commit <https://pre-commit.com>`_.
+
 
 Support
 -------
@@ -97,16 +131,6 @@ Changelog
 
 Please see `CHANGELOG`_ for more information what
 has changed recently.
-
-Contributing
-------------
-
-Contributions are welcome!
-
-Review the `CONTRIBUTING`_ for details on how to:
-
-* Submit issues
-* Submit pull requests
 
 Contact Info
 ------------
@@ -139,13 +163,6 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`Twitter`: https://twitter.com/slovacus
 .. _`Website`: http://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
-
-.. |Build Status| image:: https://travis-ci.org/luismayta/zsh-aliases.svg
-   :target: https://travis-ci.org/luismayta/zsh-aliases
-.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-aliases.svg
-   :target: https://github.com/luismayta/zsh-aliases/issues
-.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-   :target: LICENSE
 
 .. Team:
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
