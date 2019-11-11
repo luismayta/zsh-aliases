@@ -12,17 +12,21 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 
-# Functions:
+plugin_dir=$(dirname "${0}":A)
 
-if (( $+commands[tmuxinator] )); then
+# shellcheck source=/dev/null
+source "${plugin_dir}"/src/helpers/messages.zsh
+
+# Functions:
+if [ -x "$(command which tmuxinator)" ]; then
     # Alias for tmuxinator
     mux() {
-        tmuxinator ${1};
+        tmuxinator "${1}";
     }
 fi
 
 pubkey(){
-    more ~/.ssh/id_rsa.pub | pbcopy && echo '====> Public key copied to pasteboard.'
+    more ~/.ssh/id_rsa.pub | perl -pe 'chomp'  | pbcopy && message_info '====> Public key copied to pasteboard.'
 }
 
 gi() {
@@ -45,8 +49,7 @@ if [ "$(uname -s)" != "Darwin" ]; then
 	  fi
 fi
 
-if (( $+commands[docker] )); then
-
+if [ -x "$(command which docker)" ]; then
     awscli () {
         docker run --rm -it \
                -v "$(pwd):/home/nikovirtala" \
