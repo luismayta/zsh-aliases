@@ -1,27 +1,12 @@
-===========
 zsh-aliases
 ===========
 
-Functions and tools for zsh
-
-.. code-block:: bash
-
-    antibody bundle luismayta/zsh-aliases
-
-
-|ci| |GitHub issues| |GitHub license|
-
-.. |ci| image:: https://travis-ci.org/luismayta/zsh-aliases.svg
-   :target: https://travis-ci.org/luismayta/zsh-aliases
-.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-aliases.svg
-   :target: https://github.com/luismayta/zsh-aliases/issues
-.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-   :target: LICENSE
+|Build Status| |GitHub issues| |GitHub license|
 
 :Version: 0.2.0
 :Web: https://github.com/luismayta/zsh-aliases
-:Download: http://github.com/luismayta/zsh-aliases
-:Source: http://github.com/luismayta/zsh-aliases
+:Download: https://github.com/luismayta/zsh-aliases
+:Source: https://github.com/luismayta/zsh-aliases
 :Keywords: zsh-aliases
 
 .. contents:: Table of Contents:
@@ -82,25 +67,19 @@ install this plugin by doing the following:
    running zsh session.
 3. Enjoy!
 
-Contributing
-------------
+Quick Start
+===========
 
-Contributions are welcome! After cloning the repository:
+- Fork this repository
 
-.. code-block:: console
+Usage
+-----
 
-    $ make environment
-    $ make setup
+- Install dependences
 
-Tests are run with ``make``, you can run the baseline environments before submitting a PR:
+.. code-block:: bash
 
-.. code-block:: console
-
-    $ make test
-
-Style checks and formatting are done automatically during commit courtesy of
-`pre-commit <https://pre-commit.com>`_.
-
+  λ make setup
 
 Support
 -------
@@ -118,7 +97,7 @@ Team
 +---------------+
 | |Luis Mayta|  |
 +---------------+
-| `luis mayta`_ |
+| `Luis Mayta`_ |
 +---------------+
 
 License
@@ -131,6 +110,16 @@ Changelog
 
 Please see `CHANGELOG`_ for more information what
 has changed recently.
+
+Contributing
+------------
+
+Contributions are welcome!
+
+Review the `CONTRIBUTING`_ for details on how to:
+
+* Submit issues
+* Submit pull requests
 
 Contact Info
 ------------
@@ -151,10 +140,11 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. Links
 .. _`changelog`: CHANGELOG.rst
 .. _`contributors`: AUTHORS
-.. _`contributing`: CONTRIBUTING.rst
+.. _`contributing`: docs/source/CONTRIBUTING.rst
 
 .. _`hadenlabs`: https://github.com/hadenlabs
 .. _`luis mayta`: https://github.com/luismayta
+
 
 .. _`Github`: https://github.com/luismayta
 .. _`Linkedin`: https://www.linkedin.com/in/luismayta
@@ -163,6 +153,15 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`Twitter`: https://twitter.com/slovacus
 .. _`Website`: http://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
+
+.. |Fossa Status| image:: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fluismayta%2Fzsh-aliases.svg?type=large
+   :target: https://app.fossa.io/projects/git%2Bgithub.com%2Fluismayta%2Fzsh-aliases?ref=badge_large
+.. |Build Status| image:: https://travis-ci.org/luismayta/zsh-aliases.svg
+   :target: https://travis-ci.org/luismayta/zsh-aliases
+.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/zsh-aliases.svg
+   :target: https://github.com/luismayta/zsh-aliases/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
 
 .. Team:
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
@@ -175,3 +174,8 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
    :target: https://github.com/luismayta/zsh-aliases
 .. |made| image:: https://img.shields.io/badge/Made%20with-Zsh-1f425f.svg
    :target: http://www.zsh.org
+
+.. Dependences:
+
+.. _Pyenv: https://github.com/pyenv/pyenv
+.. _Docker: https://www.docker.com/
