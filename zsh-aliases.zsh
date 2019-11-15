@@ -33,6 +33,11 @@ gi() {
 	  curl -s "https://www.gitignore.io/api/$*"
 }
 
+function net {
+    # check connection
+    ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
+}
+
 # open, pbcopy and pbpaste on linux
 if [ "$(uname -s)" != "Darwin" ]; then
 	  if [ -z "$(command -v pbcopy)" ]; then
