@@ -11,11 +11,11 @@
 # Authors:
 #   Luis Mayta <slovacus@gmail.com>
 #
+ALIASES_PLUGIN_DIR="$(dirname "${0}":A)"
 
-plugin_dir=$(dirname "${0}":A)
 
 # shellcheck source=/dev/null
-source "${plugin_dir}"/src/helpers/messages.zsh
+source "${ALIASES_PLUGIN_DIR}"/src/functions.zsh
 
 # Functions:
 if [ -x "$(command which tmuxinator)" ]; then
@@ -30,7 +30,7 @@ pubkey(){
 }
 
 gi() {
-	  curl -s "https://www.gitignore.io/api/$*"
+    curl -s "https://www.gitignore.io/api/$*"
 }
 
 function net {
@@ -38,20 +38,21 @@ function net {
     ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
 }
 
+
 # open, pbcopy and pbpaste on linux
 if [ "$(uname -s)" != "Darwin" ]; then
-	  if [ -z "$(command -v pbcopy)" ]; then
-		    if [ -n "$(command -v xclip)" ]; then
-			      alias pbcopy="xclip -selection clipboard"
-			      alias pbpaste="xclip -selection clipboard -o"
-		    elif [ -n "$(command -v xsel)" ]; then
-			      alias pbcopy="xsel --clipboard --input"
-			      alias pbpaste="xsel --clipboard --output"
-		    fi
-	  fi
-	  if [ -e /usr/bin/xdg-open ]; then
-		    alias open="xdg-open"
-	  fi
+    if [ -z "$(command -v pbcopy)" ]; then
+        if [ -n "$(command -v xclip)" ]; then
+            alias pbcopy="xclip -selection clipboard"
+            alias pbpaste="xclip -selection clipboard -o"
+        elif [ -n "$(command -v xsel)" ]; then
+            alias pbcopy="xsel --clipboard --input"
+            alias pbpaste="xsel --clipboard --output"
+        fi
+    fi
+    if [ -e /usr/bin/xdg-open ]; then
+        alias open="xdg-open"
+    fi
 fi
 
 if [ -x "$(command which docker)" ]; then
