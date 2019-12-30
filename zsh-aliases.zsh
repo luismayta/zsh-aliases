@@ -15,7 +15,7 @@ ALIASES_PLUGIN_DIR="$(dirname "${0}":A)"
 
 
 # shellcheck source=/dev/null
-source "${ALIASES_PLUGIN_DIR}"/src/fzf.zsh
+source "${ALIASES_PLUGIN_DIR}"/src/functions/fzf.zsh
 
 # Functions:
 if [ -x "$(command which tmuxinator)" ]; then
