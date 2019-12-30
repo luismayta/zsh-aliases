@@ -25,6 +25,8 @@ if [ -x "$(command which tmuxinator)" ]; then
     }
 fi
 
+alias reload!='exec "$SHELL" -l'
+
 pubkey(){
     more ~/.ssh/id_rsa.pub | perl -pe 'chomp'  | pbcopy && message_info '====> Public key copied to pasteboard.'
 }
