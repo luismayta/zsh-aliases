@@ -18,7 +18,7 @@ ALIASES_PLUGIN_DIR="$(dirname "${0}":A)"
 source "${ALIASES_PLUGIN_DIR}"/src/functions/fzf.zsh
 
 # Functions:
-if [ -x "$(command which tmuxinator)" ]; then
+if type -p tmuxinator > /dev/null; then
     # Alias for tmuxinator
     mux() {
         tmuxinator "${1}";
@@ -41,7 +41,7 @@ function net {
 }
 
 
-if [ -x "$(command which docker)" ]; then
+if type -p docker > /dev/null; then
     awscli () {
         docker run --rm -it \
                -v "$(pwd):/home/nikovirtala" \
