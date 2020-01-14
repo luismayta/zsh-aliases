@@ -12,10 +12,14 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 ALIASES_PLUGIN_DIR="$(dirname "${0}":A)"
+ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/src
 
 
 # shellcheck source=/dev/null
-source "${ALIASES_PLUGIN_DIR}"/src/functions/fzf.zsh
+source "${ALIASES_SOURCE_PATH}"/base.zsh
+
+# shellcheck source=/dev/null
+source "${ALIASES_SOURCE_PATH}"/fzf.zsh
 
 # Functions:
 if type -p tmuxinator > /dev/null; then
