@@ -18,9 +18,6 @@ ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/src
 # shellcheck source=/dev/null
 source "${ALIASES_SOURCE_PATH}"/base.zsh
 
-# shellcheck source=/dev/null
-source "${ALIASES_SOURCE_PATH}"/fzf.zsh
-
 # Functions:
 if type -p tmuxinator > /dev/null; then
     # Alias for tmuxinator
@@ -44,49 +41,12 @@ function net {
     ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
 }
 
+if type -p docker > /dev/null; then
+    # shellcheck source=/dev/null
+    source "${ALIASES_SOURCE_PATH}"/fzf.zsh
+fi
 
 if type -p docker > /dev/null; then
-    function awscli {
-        docker run --rm -it \
-               -v "$(pwd):/home/nikovirtala" \
-               -v "${HOME}/.aws:/home/nikovirtala/.aws" \
-               -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
-               -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
-               -e AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" \
-               nikovirtala/awscli:latest "$@"
-    }
-
-    function aws-shell {
-        docker run --rm -it \
-               -v "$(pwd):/home/nikovirtala" \
-               -v "${HOME}/.aws:/home/nikovirtala/.aws" \
-               -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
-               -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
-               -e AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" \
-               nikovirtala/aws-shell:latest "$@"
-    }
-
-    # show nyancat in terminal
-    function nyancat {
-        docker run -it --rm supertest2014/nyan;
-    }
-
-    function ytd-mp3 {
-        docker run --rm -v "${PWD}":/data vimagick/youtube-dl --extract-audio --audio-format mp3 "$@"
-    }
-
-    function ytdl {
-        docker run --rm -v "${PWD}":/data vimagick/youtube-dl "$@"
-    }
-
-    function pandoc {
-        docker run --rm -v "${PWD}":/source jagregory/pandoc "$@"
-    }
-
-    function komiser {
-        docker run --rm -d -p 3000:3000 \
-               -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
-               -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
-               -e AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" --name komiser mlabouardy/komiser
-    }
+    # shellcheck source=/dev/null
+    source "${ALIASES_SOURCE_PATH}"/docker.zsh
 fi
