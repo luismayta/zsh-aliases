@@ -41,7 +41,11 @@ function net {
     ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
 }
 
-if type -p docker > /dev/null; then
+function ls {
+    exa
+}
+
+if type -p fzf > /dev/null; then
     # shellcheck source=/dev/null
     source "${ALIASES_SOURCE_PATH}"/fzf.zsh
 fi
