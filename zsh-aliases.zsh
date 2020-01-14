@@ -27,11 +27,11 @@ fi
 
 alias reload!='exec "$SHELL" -l'
 
-pubkey(){
+function pubkey {
     more ~/.ssh/id_rsa.pub | perl -pe 'chomp'  | pbcopy && message_info '====> Public key copied to pasteboard.'
 }
 
-gi() {
+function gi {
     curl -s "https://www.gitignore.io/api/$*"
 }
 
@@ -42,7 +42,7 @@ function net {
 
 
 if type -p docker > /dev/null; then
-    awscli () {
+    function awscli {
         docker run --rm -it \
                -v "$(pwd):/home/nikovirtala" \
                -v "${HOME}/.aws:/home/nikovirtala/.aws" \
@@ -52,7 +52,7 @@ if type -p docker > /dev/null; then
                nikovirtala/awscli:latest "$@"
     }
 
-    aws-shell () {
+    function aws-shell {
         docker run --rm -it \
                -v "$(pwd):/home/nikovirtala" \
                -v "${HOME}/.aws:/home/nikovirtala/.aws" \
@@ -63,23 +63,23 @@ if type -p docker > /dev/null; then
     }
 
     # show nyancat in terminal
-    nyancat() {
+    function nyancat {
         docker run -it --rm supertest2014/nyan;
     }
 
-    ytd-mp3() {
+    function ytd-mp3 {
         docker run --rm -v "${PWD}":/data vimagick/youtube-dl --extract-audio --audio-format mp3 "$@"
     }
 
-    ytdl(){
+    function ytdl {
         docker run --rm -v "${PWD}":/data vimagick/youtube-dl "$@"
     }
 
-    pandoc(){
+    function pandoc {
         docker run --rm -v "${PWD}":/source jagregory/pandoc "$@"
     }
 
-    komiser(){
+    function komiser {
         docker run --rm -d -p 3000:3000 \
                -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
                -e AWS_SECRET_ACCESS_KEY="${AWS_SECRET_ACCESS_KEY}" \
