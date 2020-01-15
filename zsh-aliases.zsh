@@ -28,9 +28,6 @@ fi
 
 alias reload!='exec "$SHELL" -l'
 
-function pubkey {
-    more ~/.ssh/id_rsa.pub | perl -pe 'chomp'  | pbcopy && message_info '====> Public key copied to pasteboard.'
-}
 
 function gi {
     curl -s "https://www.gitignore.io/api/$*"
@@ -41,9 +38,29 @@ function net {
     ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
 }
 
-function ls {
-    exa
+function exa::init {
+    local icons
+    icons=""
+    if type -p exa > /dev/null; then
+        if exa --icons >/dev/null 2>&1; then
+            icons="--icons"
+        fi
+        alias ls='exa ${icons}'
+        alias ll='exa -l ${icons}'
+        alias lll='exa -l ${icons} | less'
+        alias lla='exa -la ${icons}'
+        alias llt='exa -T ${icons}'
+        alias llfu='exa -bghHliS --git ${icons}'
+        return
+    fi
+    alias ls="ls --color=auto"
+    alias ll="ls -l --color=auto"
+    alias lll="ls -l --color=auto | less"
+    alias lla="ls -la --color=auto"
+    alias llfu=lla
 }
+
+exa::init
 
 if type -p fzf > /dev/null; then
     # shellcheck source=/dev/null
