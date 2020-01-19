@@ -62,11 +62,6 @@ function exa::init {
 
 exa::init
 
-if type -p fzf > /dev/null; then
-    # shellcheck source=/dev/null
-    source "${ALIASES_SOURCE_PATH}"/fzf.zsh
-fi
-
 if type -p docker > /dev/null; then
     # shellcheck source=/dev/null
     source "${ALIASES_SOURCE_PATH}"/docker.zsh
