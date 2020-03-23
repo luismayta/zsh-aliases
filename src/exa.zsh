@@ -15,36 +15,14 @@ if ! type exa > /dev/null; then
     exa::install
 fi
 
-function exa::init { 
-    local args
-    args="--all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale"
-    function l {
-        exa "${args}"
-    }
-
-    function ls {
-        exa "${args}"
-    }
-
-    function ll {
-        exa -l "${args}"
-    }
-
-    function lll {
-        exa -l "${args}" | less
-    }
-
-    function lla {
-        exa -la "${args}"
-    }
-
-    function llt {
-        exa -T "${args}"
-    }
-
-    function llfu {
-        exa -bghHliS "${args}"
-    }
+function exa::init {
+    alias l='exa --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale'
+    alias ls='exa --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale'
+    alias ll='exa -l --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale'
+    alias lll='exa -l --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale | less'
+    alias lla='exa -la --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale'
+    alias llt='exa -T --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale'
+    alias llfu='exa -bghHliS --all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale'
 }
 
 
