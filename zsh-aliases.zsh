@@ -39,25 +39,15 @@ function net {
 }
 
 function exa::init {
-    local icons
-    icons=""
-    if type exa > /dev/null; then
-        if exa --icons > /dev/null 2>&1; then
-            icons="--icons"
-        fi
-        alias ls='exa ${icons}'
-        alias ll='exa -l ${icons}'
-        alias lll='exa -l ${icons} | less'
-        alias lla='exa -la ${icons}'
-        alias llt='exa -T ${icons}'
-        alias llfu='exa -bghHliS --git ${icons}'
-        return
-    fi
-    alias ls="ls --color=auto"
-    alias ll="ls -l --color=auto"
-    alias lll="ls -l --color=auto | less"
-    alias lla="ls -la --color=auto"
-    alias llfu=lla
+    local args
+    # shellcheck disable=SC2034  # Unused variables left for readability
+    args="--all --grid --git --sort=ext --color=always --group-directories-first --icons --color-scale"
+    alias ls='exa ${args}'
+    alias ll='exa -l ${args}'
+    alias lll='exa -l ${args} | less'
+    alias lla='exa -la ${args}'
+    alias llt='exa -T ${args}'
+    alias llfu='exa -bghHliS ${args}'
 }
 
 exa::init
