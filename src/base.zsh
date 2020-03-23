@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 function exa::install {
-    if ! type -p brew > /dev/null; then
+    if ! type brew > /dev/null; then
         message_warning "please install brew or use luismayta/zsh-brew"
         return
     fi
@@ -11,6 +11,6 @@ function exa::install {
     message_success "Installed exa"
 }
 
-if ! type -p exa > /dev/null; then
+if ! type exa > /dev/null; then
     exa::install
 fi
