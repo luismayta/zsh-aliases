@@ -1,6 +1,8 @@
 zsh-aliases
 ===========
 
+Functions and tools aliases with zsh
+
 |Build Status| |GitHub issues| |GitHub license|
 
 :Version: 0.2.0
@@ -23,8 +25,8 @@ Dependencies
 .. code-block:: bash
 
     https://github.com/mafredri/zsh-async
-    https://github.com/marzocchi/zsh-notify
     https://github.com/luismayta/zsh-functions
+
 
 Installation
 ------------
@@ -139,15 +141,15 @@ Feel free to contact me to discuss any issues, questions, or comments.
 
 |linkedin| |beacon| |made|
 
-Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
+Made with :coffee: and :pizza: by `Luis Mayta`_ and `equipindustry`_.
 
 .. Links
 .. _`changelog`: CHANGELOG.rst
-.. _`contributors`: AUTHORS
+.. _`contributors`: docs/source/AUTHORS.rst
 .. _`contributing`: docs/source/CONTRIBUTING.rst
 
-.. _`hadenlabs`: https://github.com/hadenlabs
-.. _`luis mayta`: https://github.com/luismayta
+.. _`equipindustry`: https://github.com/equipindustry
+.. _`Luis Mayta`: https://github.com/luismayta
 
 
 .. _`Github`: https://github.com/luismayta
@@ -155,7 +157,7 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`Email`: slovacus@gmail.com
     :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
-.. _`Website`: http://luismayta.github.io
+.. _`Website`: https://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
 .. |Fossa Status| image:: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fluismayta%2Fzsh-aliases.svg?type=large
