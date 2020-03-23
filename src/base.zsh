@@ -8,7 +8,7 @@ if type tmuxinator > /dev/null; then
     }
 fi
 
-alias reload!='exec "$SHELL" -l'
+alias reload!='exec "${SHELL}" -l'
 
 function gi {
     curl -s "https://www.gitignore.io/api/$*"
@@ -16,5 +16,5 @@ function gi {
 
 function net {
     # check connection
-    ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
+    ping 1.1.1.1 | grep -E --only-match --color=never '[0-9\.]+ ms'
 }
