@@ -11,7 +11,7 @@
 # Authors:
 #   Luis Mayta <slovacus@gmail.com>
 #
-ALIASES_PLUGIN_DIR="$(dirname "${0}":A)"
+ALIASES_PLUGIN_DIR="$(dirname "${0}")"
 ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/src
 
 # shellcheck source=/dev/null
