@@ -1,16 +1,20 @@
 #!/usr/bin/env ksh
 # -*- coding: utf-8 -*-
 
-function exa::install {
-    if ! type brew > /dev/null; then
-        message_warning "please install brew or use luismayta/zsh-brew"
-        return
-    fi
-    message_info "Installing exa"
-    brew install exa
-    message_success "Installed exa"
+if type tmuxinator > /dev/null; then
+    # Alias for tmuxinator
+    mux() {
+        tmuxinator "${1}";
+    }
+fi
+
+alias reload!='exec "$SHELL" -l'
+
+function gi {
+    curl -s "https://www.gitignore.io/api/$*"
 }
 
-if ! type exa > /dev/null; then
-    exa::install
-fi
+function net {
+    # check connection
+    ping google.com | grep -E --only-match --color=never '[0-9\.]+ ms'
+}
