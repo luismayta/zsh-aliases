@@ -19,7 +19,7 @@ ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/src
 source "${ALIASES_SOURCE_PATH}"/base.zsh
 
 # Functions:
-if type -p tmuxinator > /dev/null; then
+if type tmuxinator > /dev/null; then
     # Alias for tmuxinator
     mux() {
         tmuxinator "${1}";
@@ -41,8 +41,8 @@ function net {
 function exa::init {
     local icons
     icons=""
-    if type -p exa > /dev/null; then
-        if exa --icons >/dev/null 2>&1; then
+    if type exa > /dev/null; then
+        if exa --icons > /dev/null 2>&1; then
             icons="--icons"
         fi
         alias ls='exa ${icons}'
@@ -62,7 +62,7 @@ function exa::init {
 
 exa::init
 
-if type -p docker > /dev/null; then
+if type docker > /dev/null; then
     # shellcheck source=/dev/null
     source "${ALIASES_SOURCE_PATH}"/docker.zsh
 fi
