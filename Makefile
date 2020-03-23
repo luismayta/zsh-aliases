@@ -18,10 +18,12 @@ else
 endif
 
 TEAM := private
+AWS_VAULT ?= luismayta
 PROJECT := zsh-aliases
 PROJECT_PORT := 8000
 
 PYTHON_VERSION=3.8.0
+NODE_VERSION=v12.14.1
 PYENV_NAME="${PROJECT}"
 
 # Configuration.
@@ -64,12 +66,16 @@ help:
 	@echo '    environment               create environment with pyenv'
 	@echo '    setup                     install requirements'
 	@echo ''
+	@make alias.help
 	@make docker.help
 	@make docs.help
 	@make test.help
 
+
 setup:
 	@echo "=====> install packages..."
+	pyenv local ${PYTHON_VERSION}
+	yarn
 	$(PIPENV_INSTALL) --dev --skip-lock
 	$(PIPENV_RUN) pre-commit install
 	$(PIPENV_RUN) pre-commit install -t pre-push
@@ -79,5 +85,6 @@ setup:
 
 environment:
 	@echo "=====> loading virtualenv ${PYENV_NAME}..."
+	pyenv local ${PYTHON_VERSION}
 	@pipenv --venv || $(PIPENV_INSTALL) --python=${PYTHON_VERSION} --skip-lock
 	@echo ${MESSAGE_HAPPY}
