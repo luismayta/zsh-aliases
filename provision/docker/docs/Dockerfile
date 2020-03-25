@@ -4,7 +4,7 @@ MAINTAINER Luis Mayta <slovacus@gmail.com>
 
 ARG stage
 
-LABEL NAME zsh-bitwarden-doc
+LABEL NAME zsh-aliases-doc
 
 ENV USERNAME developer
 
