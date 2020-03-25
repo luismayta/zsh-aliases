@@ -1,7 +1,7 @@
 #!/usr/bin/env ksh
 # -*- coding: utf-8 -*-
 
-if type tmuxinator > /dev/null; then
+if type -p tmuxinator > /dev/null; then
     # Alias for tmuxinator
     mux() {
         tmuxinator "${1}";
