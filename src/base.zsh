@@ -8,7 +8,7 @@ if type tmuxinator > /dev/null; then
     }
 fi
 
-alias reload!='exec "${SHELL}" -l'
+alias reload!='exec "${SHELL}"'
 
 function gi {
     curl -s "https://www.gitignore.io/api/$*"
