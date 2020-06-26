@@ -12,7 +12,7 @@
 #   Luis Mayta <slovacus@gmail.com>
 #
 ALIASES_PLUGIN_DIR="$(dirname "${0}")"
-ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/src
+ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/core
 
 # shellcheck source=/dev/null
 source "${ALIASES_SOURCE_PATH}"/base.zsh
