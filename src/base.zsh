@@ -8,10 +8,6 @@ if type -p tmuxinator > /dev/null; then
     }
 fi
 
-function gi {
-    curl -s "https://www.gitignore.io/api/$*"
-}
-
 function net {
     # check connection
     ping 1.1.1.1 | grep -E --only-match --color=never '[0-9\.]+ ms'
