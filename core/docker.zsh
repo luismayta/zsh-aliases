@@ -34,6 +34,10 @@ function ytdl {
     docker run --rm -v "${PWD}":/data vimagick/youtube-dl "$@"
 }
 
+function youtube-dl {
+    docker run --rm -v "${PWD}":/data vimagick/youtube-dl "$@"
+}
+
 function pandoc {
     docker run --rm -v "${PWD}":/source jagregory/pandoc "$@"
 }
