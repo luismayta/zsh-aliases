@@ -7,16 +7,17 @@
 # Authors:
 #   Luis Mayta <slovacus@gmail.com>
 #
-ALIASES_PLUGIN_DIR="$(dirname "${0}")"
-ALIASES_SOURCE_PATH="${ALIASES_PLUGIN_DIR}"/core
+#
+ZSH_ALIASES_PATH=$(dirname "${0}")
 
 # shellcheck source=/dev/null
-source "${ALIASES_SOURCE_PATH}"/base.zsh
+source "${ZSH_ALIASES_PATH}"/config/main.zsh
 
 # shellcheck source=/dev/null
-source "${ALIASES_SOURCE_PATH}"/exa.zsh
+source "${ZSH_ALIASES_PATH}"/core/main.zsh
 
-if type docker > /dev/null; then
-    # shellcheck source=/dev/null
-    source "${ALIASES_SOURCE_PATH}"/docker.zsh
-fi
+# shellcheck source=/dev/null
+source "${ZSH_ALIASES_PATH}"/internal/main.zsh
+
+# shellcheck source=/dev/null
+source "${ZSH_ALIASES_PATH}"/pkg/main.zsh
