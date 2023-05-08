@@ -4,10 +4,6 @@
 #
 # Defines alias for osx or linux.
 #
-# Requirements:
-#  - docker: https://www.docker.com
-#  - zsh: https://www.zsh.org/
-#
 # Authors:
 #   Luis Mayta <slovacus@gmail.com>
 #

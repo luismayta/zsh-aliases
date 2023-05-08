@@ -5,7 +5,6 @@ Briefly describe the issue you are experiencing (or the feature you want to see 
 ## Environment
 
 - OS: {Please write here}
-- Version : {Please write here}
 
 ## Details
 

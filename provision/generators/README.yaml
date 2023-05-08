@@ -1,0 +1,63 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: zsh-aliases
+
+email:
+  support: support@hadenlabs.com
+
+# Logo for this project
+# logo: docs/logo.png
+
+# License of this project
+license: "LGPL-3.0"
+
+# Canonical GitHub repo
+github_repo: luismayta/zsh-aliases
+
+# Badges to display
+badges:
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/zsh-aliases
+    url: https://github.com/luismayta/zsh-aliases/releases
+  - name: Lint
+    image: https://img.shields.io/github/workflow/status/luismayta/zsh-aliases/lint-code
+    url: https://github.com/luismayta/zsh-aliases/actions?workflow=lint-code
+  - name: CI
+    image: https://img.shields.io/github/workflow/status/luismayta/zsh-aliases/ci
+    url: https://github.com/luismayta/zsh-aliases/actions?workflow=ci
+  - name: Test
+    image: https://img.shields.io/github/workflow/status/luismayta/zsh-aliases/test
+    url: https://github.com/luismayta/zsh-aliases/actions?workflow=test
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
+  - name: Conventional Commits
+    image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+    url: https://conventionalcommits.org
+  - name: KeepAChangelog
+    image: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange
+    url: https://keepachangelog.com
+
+requirements: |-
+
+  This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
+
+  - [gomplate](https://github.com/hairyhenderson/gomplate)
+  - [python](https://www.python.org)
+  - [taskfile](https://github.com/go-task/task)
+
+# Short description of this project
+description: |-
+
+  zsh-aliases for project
+
+usages:
+  - docs/usage.md
+
+examples:
+  - "docs/examples/common.md"

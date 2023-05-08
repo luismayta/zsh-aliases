@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "zsh-aliases"
+version = "0.0.0"
+description = "base template"
+authors = ["Luis Mayta <luis@hadenlabs.com>"]
+license = "LGPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.26.130"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+bridgecrew = "*"
+grip = "*"
+parso = "*"
+pre-commit = "*"
+pygments = "*"
+pylint = "*"
+bumpversion = "*"
+
+[tool.poetry.group.format.dependencies]
+black = "*"
+pycodestyle = "*"
+isort = "*"
+pydocstyle = "*"
+mypy = "*"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "*"
+mkdocs-material = "*"
+pymdown-extensions = "*"
+doc8 = "*"
+
+[tool.poetry_bumpversion.file."sonar-project.properties"]
+search = 'sonar.projectVersion={current_version}'
+replace = 'sonar.projectVersion={new_version}'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
