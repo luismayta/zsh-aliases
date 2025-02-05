@@ -6,7 +6,7 @@ function aliases::internal::main::factory {
     source "${ZSH_ALIASES_PATH}"/internal/base.zsh
 
     # shellcheck source=/dev/null
-    source "${ZSH_ALIASES_PATH}"/internal/exa.zsh
+    source "${ZSH_ALIASES_PATH}"/internal/eza.zsh
 
     # shellcheck source=/dev/null
     source "${ZSH_ALIASES_PATH}"/internal/docker.zsh
